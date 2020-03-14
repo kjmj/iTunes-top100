@@ -1,0 +1,17 @@
+@import "../../styles";
+
+.card {
+  max-width: 170px;
+}
+
+.rank-container {
+  display: table;
+  background-color: mat-color($iTunes-top100-primary);
+}
+
+.rank-text {
+  text-align:center;
+  vertical-align: middle;
+  display: table-cell;
+  color: white
+}

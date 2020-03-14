@@ -10,7 +10,7 @@ describe('TopAlbumsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      declarations: [ TopAlbumsComponent ]
+      declarations: [ TopAlbumsComponent ],
     })
     .compileComponents();
   }));

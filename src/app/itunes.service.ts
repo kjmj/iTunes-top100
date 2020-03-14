@@ -22,8 +22,9 @@ export class ItunesService {
     return this.http.get<any>(this.itunesApi)
       .pipe(
         map(data => {
-          return data.feed.entry.map(item => {
+          return data.feed.entry.map((item, idx) => {
             return new Album(
+              idx + 1,
               item['im:name'].label,
               item['im:image'][2].label,
               item.link.attributes.href,
