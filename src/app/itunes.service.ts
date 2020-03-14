@@ -8,7 +8,7 @@ import {Album} from './album';
   providedIn: 'root'
 })
 export class ItunesService {
-  itunesApi = 'https://itunes.apple.com/us/rss/topalbums/limit=100/json';
+  itunesApi = 'https://itunes.apple.com/us/rss/topalbums/limit=100/explicit=true/json';
 
   constructor(
     private http: HttpClient
