@@ -8,9 +8,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should render correct greeting title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('iTunes-top100 app is running!');
+    expect(page.getTitleText()).toEqual('iTunes Top 100 Albums');
   });
 
   afterEach(async () => {

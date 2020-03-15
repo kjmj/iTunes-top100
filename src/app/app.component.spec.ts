@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('iTunes-top100');
   });
 
-  it('should render title', () => {
+  it('should render correct greeting title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
