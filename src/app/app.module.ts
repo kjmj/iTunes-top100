@@ -10,11 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MaterialElevationOnHoverDirective } from './directives/material-elevation-on-hover.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopAlbumsComponent
+    TopAlbumsComponent,
+    MaterialElevationOnHoverDirective,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <!--Create a card for each album and display relevant information-->
 <div fxLayout="row wrap" fxLayoutAlign="center stretch">
-  <mat-card class="card" *ngFor="let album of topAlbums | async" style="margin: 10px">
+  <mat-card *ngFor="let album of topAlbums | async" appMaterialElevationOnHover="8" class="card">
     <mat-card-header>
       <div mat-card-avatar class="rank-container">
         <p class="rank-text">{{album.popularityRank}}</p>
