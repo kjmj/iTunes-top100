@@ -10,6 +10,7 @@ import {ItunesService} from '../../services/itunes.service';
 })
 export class TopAlbumsComponent implements OnInit {
   topAlbums: Observable<Album[]>;
+  searchText: string;
 
   constructor(
     private itunesService: ItunesService

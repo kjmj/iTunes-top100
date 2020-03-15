@@ -11,12 +11,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialElevationOnHoverDirective } from './directives/material-elevation-on-hover.directive';
+import { ListFilterPipe } from './pipes/list-filter.pipe';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopAlbumsComponent,
     MaterialElevationOnHoverDirective,
+    ListFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { MaterialElevationOnHoverDirective } from './directives/material-elevati
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

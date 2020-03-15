@@ -1,6 +1,13 @@
 <!--Create a card for each album and display relevant information-->
+<mat-form-field class="search">
+  <mat-label>Search</mat-label>
+  <input matInput placeholder="By album or artist" [(ngModel)]="searchText">
+</mat-form-field>
+
 <div fxLayout="row wrap" fxLayoutAlign="center stretch">
-  <mat-card *ngFor="let album of topAlbums | async" appMaterialElevationOnHover="8" class="card">
+  <mat-card *ngFor="let album of topAlbums | async | listFilter:searchText:['name', 'artist']"
+            appMaterialElevationOnHover="8"
+            class="card">
     <mat-card-header>
       <div mat-card-avatar class="rank-container">
         <p class="rank-text">{{album.popularityRank}}</p>
