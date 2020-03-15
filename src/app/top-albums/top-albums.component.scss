@@ -1,7 +1,7 @@
 @import "../../styles";
 
 .card {
-  max-width: 170px;
+  width: 170px;
 }
 
 .rank-container {
@@ -14,4 +14,10 @@
   vertical-align: middle;
   display: table-cell;
   color: white
+}
+
+.wrapText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

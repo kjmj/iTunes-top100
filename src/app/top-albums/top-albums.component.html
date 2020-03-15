@@ -1,14 +1,32 @@
 <!--Create a card for each album and display relevant information-->
-<mat-card class="card" *ngFor="let album of topAlbums | async">
-  <mat-card-header>
-    <div mat-card-avatar class="rank-container">
-      <p class="rank-text">{{album.pos}}</p>
-    </div>
-    <mat-card-title>{{album.name}}</mat-card-title>
-    <mat-card-subtitle>{{album.artist}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{album.imgUrl}}" alt="{{album.name}} by {{album.artist}}">
-  <mat-card-actions>
-    <a mat-button color="primary" href="{{album.iTunesLink}}" target="_blank">BUY</a>
-  </mat-card-actions>
-</mat-card>
+<div fxLayout="row wrap" fxLayoutAlign="center stretch">
+  <mat-card class="card" *ngFor="let album of topAlbums | async" style="margin: 10px">
+    <mat-card-header>
+      <div mat-card-avatar class="rank-container">
+        <p class="rank-text">{{album.pos}}</p>
+      </div>
+    </mat-card-header>
+
+    <img mat-card-image src="{{album.imgUrl}}" alt="{{album.name}} by {{album.artist}}">
+    <a href="{{album.iTunesLink}}" target="_blank">
+      <p class="mat-body-strong wrapText">
+        {{album.name}}
+      </p>
+    </a>
+
+    <!--Hyperlink to artist if available, otherwise just show the artist name-->
+    <div *ngIf="album.artistUrl; then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock>
+      <a href="{{album.artistUrl}}" target="_blank">
+        <p class="mat-body wrapText">{{album.artist}}</p>
+      </a>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <p class="mat-body wrapText">
+        {{album.artist}}
+      </p>
+    </ng-template>
+  </mat-card>
+</div>

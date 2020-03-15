@@ -30,3 +30,11 @@ $iTunes-top100-theme: mat-light-theme($iTunes-top100-primary, $iTunes-top100-acc
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
