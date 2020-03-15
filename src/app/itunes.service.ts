@@ -25,12 +25,14 @@ export class ItunesService {
           return data.feed.entry.map((item, idx) => {
             // TODO better parsing of null/undefined
             return new Album(
-              idx + 1,
-              item['im:name'].label,
-              item['im:image'][2].label,
-              item.link.attributes.href,
-              item['im:artist'].label,
-              item['im:artist'].attributes === undefined ? null : item['im:artist'].attributes.href
+              {
+                popularityRank: idx + 1,
+                name: item['im:name'].label,
+                artist: item['im:artist'].label,
+                artistUrl: item['im:artist'].attributes === undefined ? null : item['im:artist'].attributes.href,
+                albumUrl: item.link.attributes.href,
+                albumCoverUrl: item['im:image'][2].label,
+              }
             );
           });
         })

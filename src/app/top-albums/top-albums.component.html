@@ -3,12 +3,12 @@
   <mat-card class="card" *ngFor="let album of topAlbums | async" style="margin: 10px">
     <mat-card-header>
       <div mat-card-avatar class="rank-container">
-        <p class="rank-text">{{album.pos}}</p>
+        <p class="rank-text">{{album.popularityRank}}</p>
       </div>
     </mat-card-header>
 
-    <img mat-card-image src="{{album.imgUrl}}" alt="{{album.name}} by {{album.artist}}">
-    <a href="{{album.iTunesLink}}" target="_blank">
+    <img mat-card-image src="{{album.albumCoverUrl}}" alt="{{album.name}} by {{album.artist}}">
+    <a href="{{album.albumUrl}}" target="_blank">
       <p class="mat-body-strong wrapText">
         {{album.name}}
       </p>
