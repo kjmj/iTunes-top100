@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
-import {Album} from '../album';
-import {ItunesService} from '../itunes.service';
+import {Album} from '../../classes/album';
+import {ItunesService} from '../../services/itunes.service';
 
 @Component({
   selector: 'app-top-albums',
