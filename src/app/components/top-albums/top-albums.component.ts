@@ -3,6 +3,9 @@ import {Observable} from 'rxjs';
 import {Album} from '../../classes/album';
 import {ItunesService} from '../../services/itunes.service';
 
+/**
+ * This component creates a card for each album in the top 100 list.
+ */
 @Component({
   selector: 'app-top-albums',
   templateUrl: './top-albums.component.html',

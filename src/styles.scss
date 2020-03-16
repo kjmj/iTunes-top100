@@ -38,3 +38,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.customTextStyle {
+  padding-left: 5px;
+  margin-bottom: 0 !important;
+}

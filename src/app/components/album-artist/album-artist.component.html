@@ -1,0 +1,12 @@
+<!--Hyperlink to artist if available, otherwise just show the artist name-->
+<div *ngIf="artistUrl; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <a href="{{artistUrl}}" target="_blank">
+    <p class="mat-body truncate customTextStyle">{{artistName}}</p>
+  </a>
+</ng-template>
+<ng-template #elseBlock>
+  <p class="mat-body truncate customTextStyle">
+    {{artistName}}
+  </p>
+</ng-template>

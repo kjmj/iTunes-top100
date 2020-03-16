@@ -1,39 +1,28 @@
-<!--Create a card for each album and display relevant information-->
-<mat-form-field class="search">
+<mat-form-field class="searchBar">
   <mat-label>Search</mat-label>
-  <input matInput placeholder="By album or artist" [(ngModel)]="searchText">
+  <label>
+    <input matInput placeholder="By album or artist" [(ngModel)]="searchText">
+  </label>
 </mat-form-field>
 
-<div fxLayout="row wrap" fxLayoutAlign="center stretch">
+<div fxLayout="row wrap" fxLayoutAlign.gt-xs="space-evenly">
+  <!--Create a card for each album, filter the list of albums by a search term-->
   <mat-card *ngFor="let album of topAlbums | async | listFilter:searchText:['name', 'artist']"
             appMaterialElevationOnHover="8"
-            class="card">
-    <mat-card-header>
-      <div mat-card-avatar class="rank-container">
-        <p class="rank-text">{{album.popularityRank}}</p>
+            class="card truncate">
+    <div fxLayout="row" fxLayoutAlign="start center" class="rowContainer">
+      <!--Popularity rank shown here if screen size < s-->
+      <app-album-rank [albumRank]="album.popularityRank" fxHide fxShow.lt-sm></app-album-rank>
+      <!--Album cover image-->
+      <img mat-card-image src="{{album.albumCoverUrl}}" alt="{{album.name}} by {{album.artist}}" class="img">
+      <div fxLayout="row" class="truncate" fxLayoutAlign="start center">
+        <!--Popularity rank shown here if screen size > xs-->
+        <app-album-rank [albumRank]="album.popularityRank" fxHide fxShow.gt-xs></app-album-rank>
+        <div fxLayout="column" class="truncate">
+          <app-album-name [albumName]="album.name" [albumUrl]="album.albumUrl"></app-album-name>
+          <app-album-artist [artistName]="album.artist" [artistUrl]="album.artistUrl"></app-album-artist>
+        </div>
       </div>
-    </mat-card-header>
-
-    <img mat-card-image src="{{album.albumCoverUrl}}" alt="{{album.name}} by {{album.artist}}">
-    <a href="{{album.albumUrl}}" target="_blank">
-      <p class="mat-body-strong wrapText">
-        {{album.name}}
-      </p>
-    </a>
-
-    <!--Hyperlink to artist if available, otherwise just show the artist name-->
-    <div *ngIf="album.artistUrl; then thenBlock else elseBlock"></div>
-
-    <ng-template #thenBlock>
-      <a href="{{album.artistUrl}}" target="_blank">
-        <p class="mat-body wrapText">{{album.artist}}</p>
-      </a>
-    </ng-template>
-
-    <ng-template #elseBlock>
-      <p class="mat-body wrapText">
-        {{album.artist}}
-      </p>
-    </ng-template>
+    </div>
   </mat-card>
 </div>

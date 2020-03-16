@@ -1,28 +1,36 @@
-@import "../../../styles";
+$card-width: 170px;
+$img-size-mobile: 50px;
 
-.card {
-  width: 170px;
-  margin: 10px;
+// desktop
+@media only screen and (min-width: 600px) {
+  .card {
+    width: $card-width;
+    margin: 10px;
+  }
+
+  .rowContainer {
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+  }
 }
 
-.search {
+// mobile
+@media only screen and (max-width: 599px) {
+  .card {
+    width: 100%;
+    margin: 5px;
+    padding: 5px !important;
+  }
+
+  .img {
+    height: $img-size-mobile;
+    width: $img-size-mobile;
+    display: block;
+    margin: 0 !important;
+  }
+}
+
+.searchBar {
   width: 100%;
-}
-
-.rank-container {
-  display: table;
-  background-color: mat-color($iTunes-top100-primary);
-}
-
-.rank-text {
-  text-align:center;
-  vertical-align: middle;
-  display: table-cell;
-  color: white
-}
-
-.wrapText {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

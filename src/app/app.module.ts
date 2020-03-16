@@ -14,6 +14,9 @@ import { MaterialElevationOnHoverDirective } from './directives/material-elevati
 import { ListFilterPipe } from './pipes/list-filter.pipe';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import { AlbumRankComponent } from './components/album-rank/album-rank.component';
+import { AlbumArtistComponent } from './components/album-artist/album-artist.component';
+import { AlbumNameComponent } from './components/album-name/album-name.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import {FormsModule} from '@angular/forms';
     TopAlbumsComponent,
     MaterialElevationOnHoverDirective,
     ListFilterPipe,
+    AlbumRankComponent,
+    AlbumArtistComponent,
+    AlbumNameComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,7 @@ import {FormsModule} from '@angular/forms';
     MatButtonModule,
     FlexLayoutModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
