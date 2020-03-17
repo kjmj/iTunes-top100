@@ -8,6 +8,8 @@ describe('Album', () => {
   const expectedAlbumUrl  = 'https://music.apple.com/us/album/abbey-road-remastered/1441164426';
   const expectedArtist = 'The Beatles';
   const expectedArtistUrl = 'https://music.apple.com/us/artist/the-beatles/136975';
+  const expectedGenre = 'Rock';
+  const expectedGenreUrl = 'https://itunes.apple.com/us/genre/id21';
 
   let album: Album;
 
@@ -18,7 +20,9 @@ describe('Album', () => {
       albumCoverUrl: expectedAlbumCoverUrl,
       albumUrl: expectedAlbumUrl,
       artist: expectedArtist,
-      artistUrl: expectedArtistUrl
+      artistUrl: expectedArtistUrl,
+      genre: expectedGenre,
+      genreUrl: expectedGenreUrl
     });
   });
 
@@ -34,5 +38,7 @@ describe('Album', () => {
     expect(album.name).toEqual(expectedName);
     expect(album.albumUrl).toEqual(expectedAlbumUrl);
     expect(album.artistUrl).toEqual(expectedArtistUrl);
+    expect(album.genre).toEqual(expectedGenre);
+    expect(album.genreUrl).toEqual(expectedGenreUrl);
   });
 });

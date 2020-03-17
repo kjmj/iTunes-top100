@@ -32,6 +32,8 @@ export class ItunesService {
                 artistUrl: item['im:artist'].attributes === undefined ? null : item['im:artist'].attributes.href,
                 albumUrl: item.link.attributes.href,
                 albumCoverUrl: item['im:image'][2].label,
+                genre: item.category.attributes.term,
+                genreUrl: item.category.attributes.scheme,
               }
             );
           });

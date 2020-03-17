@@ -13,10 +13,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialElevationOnHoverDirective } from './directives/material-elevation-on-hover.directive';
 import { ListFilterPipe } from './pipes/list-filter.pipe';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlbumRankComponent } from './components/album-rank/album-rank.component';
 import { AlbumArtistComponent } from './components/album-artist/album-artist.component';
 import { AlbumNameComponent } from './components/album-name/album-name.component';
+import {MatSelectModule} from '@angular/material/select';
+import { AlbumGenreComponent } from './components/album-genre/album-genre.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { AlbumNameComponent } from './components/album-name/album-name.component
     AlbumRankComponent,
     AlbumArtistComponent,
     AlbumNameComponent,
+    AlbumGenreComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,8 @@ import { AlbumNameComponent } from './components/album-name/album-name.component
     FlexLayoutModule,
     MatInputModule,
     FormsModule,
+    MatSelectModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

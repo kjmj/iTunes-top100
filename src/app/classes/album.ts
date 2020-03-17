@@ -5,11 +5,20 @@ export class Album {
   albumUrl: string; // url of this album on iTunes
   artist: string; // artist of this album
   artistUrl: string; // url of this album on iTunes
+  genre: string; // genre of this album
+  genreUrl: string; // url of this genre on iTunes
 
   // Represents a music album
   // Parameters are passed as named since there are many
   constructor(private params: {
-    popularityRank: number, name: string, albumCoverUrl: string, albumUrl: string, artist: string, artistUrl: string
+    popularityRank: number,
+    name: string,
+    albumCoverUrl: string,
+    albumUrl: string,
+    artist: string,
+    artistUrl: string,
+    genre: string,
+    genreUrl: string
   }) {
     this.popularityRank = params.popularityRank;
     this.name = params.name;
@@ -17,5 +26,7 @@ export class Album {
     this.albumUrl = params.albumUrl;
     this.artist = params.artist;
     this.artistUrl = params.artistUrl;
+    this.genre = params.genre;
+    this.genreUrl = params.genreUrl;
   }
 }

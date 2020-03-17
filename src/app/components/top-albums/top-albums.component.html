@@ -5,9 +5,16 @@
   </label>
 </mat-form-field>
 
+<mat-form-field>
+  <mat-label>Filter by Genre(s)</mat-label>
+  <mat-select [formControl]="genres" multiple>
+    <mat-option *ngFor="let genre of genreList" [value]="genre">{{genre}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
 <div fxLayout="row wrap" fxLayoutAlign.gt-xs="space-evenly">
-  <!--Create a card for each album, filter the list of albums by a search term-->
-  <mat-card *ngFor="let album of topAlbums | async | listFilter:searchText:['name', 'artist']"
+  <!--Create a card for each album, filter the list of albums by a search term and genre(s)-->
+  <mat-card *ngFor="let album of topAlbums | listFilter:searchText:['name', 'artist']:genres.value"
             appMaterialElevationOnHover="8"
             class="card truncate">
     <div fxLayout="row" fxLayoutAlign="start center" class="rowContainer">
@@ -21,6 +28,7 @@
         <div fxLayout="column" class="truncate">
           <app-album-name [albumName]="album.name" [albumUrl]="album.albumUrl"></app-album-name>
           <app-album-artist [artistName]="album.artist" [artistUrl]="album.artistUrl"></app-album-artist>
+          <app-album-genre [genre]="album.genre" [genreUrl]="album.genreUrl"></app-album-genre>
         </div>
       </div>
     </div>
