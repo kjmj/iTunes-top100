@@ -1,0 +1,12 @@
+<!--Show the text and add a hyperlink if provided-->
+<div *ngIf="url; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <a href="{{url}}" target="_blank">
+    <p class="truncate customTextStyle">{{text}}</p>
+  </a>
+</ng-template>
+<ng-template #elseBlock>
+  <p class="truncate customTextStyle">
+    {{text}}
+  </p>
+</ng-template>

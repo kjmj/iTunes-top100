@@ -26,9 +26,9 @@
         <!--Popularity rank shown here if screen size > xs-->
         <app-album-rank [albumRank]="album.popularityRank" fxHide fxShow.gt-xs></app-album-rank>
         <div fxLayout="column" class="truncate">
-          <app-album-name [albumName]="album.name" [albumUrl]="album.albumUrl"></app-album-name>
-          <app-album-artist [artistName]="album.artist" [artistUrl]="album.artistUrl"></app-album-artist>
-          <app-album-genre [genre]="album.genre" [genreUrl]="album.genreUrl"></app-album-genre>
+          <app-album-text [text]="album.name" [url]="album.albumUrl" class="mat-body-strong"></app-album-text>
+          <app-album-text [text]="album.artist" [url]="album.artistUrl" class="mat-body"></app-album-text>
+          <app-album-text [text]="album.genre" [url]="album.genreUrl" class="mat-body"></app-album-text>
         </div>
       </div>
     </div>

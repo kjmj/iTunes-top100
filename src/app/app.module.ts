@@ -15,10 +15,8 @@ import { ListFilterPipe } from './pipes/list-filter.pipe';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlbumRankComponent } from './components/album-rank/album-rank.component';
-import { AlbumArtistComponent } from './components/album-artist/album-artist.component';
-import { AlbumNameComponent } from './components/album-name/album-name.component';
 import {MatSelectModule} from '@angular/material/select';
-import { AlbumGenreComponent } from './components/album-genre/album-genre.component';
+import { AlbumTextComponent } from './components/album-text/album-text.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +25,7 @@ import { AlbumGenreComponent } from './components/album-genre/album-genre.compon
     MaterialElevationOnHoverDirective,
     ListFilterPipe,
     AlbumRankComponent,
-    AlbumArtistComponent,
-    AlbumNameComponent,
-    AlbumGenreComponent,
+    AlbumTextComponent,
   ],
   imports: [
     BrowserModule,
