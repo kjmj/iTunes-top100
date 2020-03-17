@@ -3,12 +3,13 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Album} from '../classes/album';
+import {GlobalConstants} from '../global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItunesService {
-  itunesApi = 'https://itunes.apple.com/us/rss/topalbums/limit=100/explicit=true/json';
+  itunesApi = GlobalConstants.iTunesApi;
 
   constructor(
     private http: HttpClient

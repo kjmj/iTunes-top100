@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AlbumRankComponent } from './components/album-rank/album-rank.component';
 import {MatSelectModule} from '@angular/material/select';
 import { AlbumTextComponent } from './components/album-text/album-text.component';
+import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AlbumTextComponent } from './components/album-text/album-text.component
     ListFilterPipe,
     AlbumRankComponent,
     AlbumTextComponent,
+    ProjectDescriptionComponent,
   ],
   imports: [
     BrowserModule,
