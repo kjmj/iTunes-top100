@@ -18,6 +18,8 @@ import { AlbumRankComponent } from './components/album-rank/album-rank.component
 import {MatSelectModule} from '@angular/material/select';
 import { AlbumTextComponent } from './components/album-text/album-text.component';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
+import { ProjectFooterComponent } from './components/project-footer/project-footer.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
     AlbumRankComponent,
     AlbumTextComponent,
     ProjectDescriptionComponent,
+    ProjectFooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { ProjectDescriptionComponent } from './components/project-description/pr
     FormsModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
