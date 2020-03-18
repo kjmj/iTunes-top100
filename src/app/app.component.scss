@@ -1,0 +1,13 @@
+// desktop
+@media only screen and (min-width: 600px) {
+  .container {
+    margin : 20px;
+  }
+}
+
+// mobile
+@media only screen and (max-width: 599px) {
+  .container {
+    margin : 5px;
+  }
+}

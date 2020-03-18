@@ -20,6 +20,7 @@ import { AlbumTextComponent } from './components/album-text/album-text.component
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 import { ProjectFooterComponent } from './components/project-footer/project-footer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ProjectHeaderComponent } from './components/project-header/project-header.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     AlbumTextComponent,
     ProjectDescriptionComponent,
     ProjectFooterComponent,
+    ProjectHeaderComponent,
   ],
   imports: [
     BrowserModule,

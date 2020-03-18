@@ -25,11 +25,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('iTunes-top100');
   });
-
-  it('should render correct greeting title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('#title').textContent).toContain('iTunes Top 100 Albums');
-  });
 });
