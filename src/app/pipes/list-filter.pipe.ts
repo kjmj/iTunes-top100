@@ -14,7 +14,7 @@ export class ListFilterPipe implements PipeTransform {
    * @param matchKeys Provide a list of keys. The searchText will be matched on the value associated with the given key(s).
    * @param genres Provide a list of genres, and the list will be filtered to songs that match the specified genre(s).
    */
-  transform(list: Album[], searchText: string, matchKeys: string[], genres: string[]): any {
+  transform(list: Album[], searchText: string, matchKeys: string[], genres: string[]): Album[] {
     // a list of items that match the search text on the given keys
     const filteredBySearch = this.filterBySearchTerm(list, searchText, matchKeys);
 
@@ -40,7 +40,7 @@ export class ListFilterPipe implements PipeTransform {
    *        {id: 0, firstName: 'john', lastName, 'stamos'}
    *        provide matchKeys=['firstName', 'lastName'] to filter only on the 'firstName' and 'lastName' keys, and ignore the 'id' field
    */
-  filterBySearchTerm(list: any[], searchText: string, matchKeys: string[]) {
+  filterBySearchTerm(list: any[], searchText: string, matchKeys: string[]): any[] {
     return list ? list.filter(item => {
       // try to find a match for each key specified
       for (let i = 0; i < matchKeys.length; i++) {
@@ -61,7 +61,7 @@ export class ListFilterPipe implements PipeTransform {
    * @param key The object key whose value you are interested in matching searchText on
    * @param searchText The searchText, usually a string entered by a user
    */
-  doesTextMatch(item: any, searchText: string, key: string) {
+  doesTextMatch(item: any, searchText: string, key: string): boolean {
     try {
       return item[key].search(new RegExp(searchText, 'i')) > -1;
     } catch (e) {
@@ -77,7 +77,7 @@ export class ListFilterPipe implements PipeTransform {
    * @param filterStrings The strings which you want to filter the list of objects by.
    * @param key The object key that you want to filter on.
    */
-  filterByStrings(list: any[], filterStrings: string[], key: string) {
+  filterByStrings(list: any[], filterStrings: string[], key: string): any[] {
     // true if there aren't any strings to filter on
     const noFilters = filterStrings == null || filterStrings.length === 0;
 

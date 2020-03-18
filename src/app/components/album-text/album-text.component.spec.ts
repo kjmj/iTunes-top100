@@ -25,7 +25,7 @@ describe('AlbumTextComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should show album artist as hyperlink', () => {
+  it('should show album artist as hyperlink if provided', () => {
     component.text = expectedText;
     component.url = expectedUrl;
     fixture.detectChanges();
