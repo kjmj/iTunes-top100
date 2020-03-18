@@ -27,4 +27,9 @@ describe('ProjectHeaderComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('span').textContent).toContain('iTunes Top 100 Albums');
   });
+
+  it('should hyperlink to the github repo', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('a').href).toContain('https://github.com/kjmj/iTunes-top100');
+  });
 });

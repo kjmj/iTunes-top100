@@ -18,7 +18,6 @@ import { AlbumRankComponent } from './components/album-rank/album-rank.component
 import {MatSelectModule} from '@angular/material/select';
 import { AlbumTextComponent } from './components/album-text/album-text.component';
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
-import { ProjectFooterComponent } from './components/project-footer/project-footer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { ProjectHeaderComponent } from './components/project-header/project-header.component';
 
@@ -31,7 +30,6 @@ import { ProjectHeaderComponent } from './components/project-header/project-head
     AlbumRankComponent,
     AlbumTextComponent,
     ProjectDescriptionComponent,
-    ProjectFooterComponent,
     ProjectHeaderComponent,
   ],
   imports: [
