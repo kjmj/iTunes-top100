@@ -8,10 +8,10 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should render correct greeting title', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('iTunes Top 100 Albums');
-  });
+  // it('should render correct greeting title', () => {
+  //   page.navigateTo();
+  //   expect(page.getTitleText()).toEqual('iTunes Top 100 Albums');
+  // });
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
