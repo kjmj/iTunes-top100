@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Album} from '../../classes/album';
 import {ItunesService} from '../../services/itunes.service';
 import {FormControl} from '@angular/forms';
+import {finalize} from 'rxjs/operators';
 
 /**
  * This component creates a card for each album in the top 100 list.
@@ -18,12 +19,18 @@ export class TopAlbumsComponent implements OnInit {
   genres = new FormControl();
   genreList: string[];
 
+  loading = false;
+
   constructor(
     private itunesService: ItunesService
   ) { }
 
   ngOnInit(): void {
-    this.itunesService.getTopAlbums().subscribe(value => {
+    this.loading = true;
+
+    this.itunesService.getTopAlbums().pipe(
+      finalize(() => this.loading = false)
+    ).subscribe(value => {
       this.topAlbums = value;
       this.genreList = this.getGenres(this.topAlbums);
     });

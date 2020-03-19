@@ -20,6 +20,7 @@ import { AlbumTextComponent } from './components/album-text/album-text.component
 import { ProjectDescriptionComponent } from './components/project-description/project-description.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { ProjectHeaderComponent } from './components/project-header/project-header.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ProjectHeaderComponent } from './components/project-header/project-head
     MatSelectModule,
     ReactiveFormsModule,
     MatToolbarModule,
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

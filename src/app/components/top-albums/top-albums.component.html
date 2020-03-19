@@ -12,6 +12,8 @@
   </mat-select>
 </mat-form-field>
 
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
 <div fxLayout="row wrap" fxLayoutAlign.gt-xs="space-evenly">
   <!--Create a card for each album, filter the list of albums by a search term and genre(s)-->
   <mat-card *ngFor="let album of topAlbums | listFilter:searchText:['name', 'artist']:genres.value"
