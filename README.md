@@ -1,6 +1,10 @@
 # ITunesTop100
+Live website: https://kjmj.github.io/iTunes-top100/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+This website shows the top 100 albums on iTunes at any given time. I have used [angular](https://angular.io/) to build it.
+
+## Setup
+Run `npm install` to install all dependencies.
 
 ## Development server
 
@@ -24,7 +28,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Build and Deploy to GitHub pages
 
-Run `npm run deploy` to build the project and deploy it to GitHub pages at https://kjmj.github.io/iTunes-top100/.
+Run `npm run deploy` to build the project and deploy it to [GitHub pages](https://pages.github.com/).
 
 ## Further help
 

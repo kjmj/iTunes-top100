@@ -28,8 +28,13 @@ describe('ProjectHeaderComponent', () => {
     expect(compiled.querySelector('span').textContent).toContain('iTunes Top 100 Albums');
   });
 
-  it('should hyperlink to the github repo', () => {
+  it('should have a hyperlink to refresh the page', () => {
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('a').href).toContain('https://github.com/kjmj/iTunes-top100');
+    expect(compiled.querySelectorAll('a')[0].href).toContain('');
+  });
+
+  it('should have a hyperlink to the github repo', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelectorAll('a')[1].href).toContain('https://github.com/kjmj/iTunes-top100');
   });
 });
