@@ -24,7 +24,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Build and Deploy to GitHub pages
 
-Run `ng deploy` to build the project and deploy it to GitHub pages at https://kjmj.github.io/iTunes-top100/.
+Run `npm run deploy` to build the project and deploy it to GitHub pages at https://kjmj.github.io/iTunes-top100/.
 
 ## Further help
 
