@@ -18,20 +18,21 @@
   <ng-container *ngFor="let album of topAlbums | listFilter:searchText:['name', 'artist']:genres.value">
 
     <!--If there isn't a match to their search/filter, show an error message-->
-    <p *ngIf="!album && hasLoaded">We couldn't find a match for your query 😦</p>
+    <p *ngIf="!album && hasLoaded">We couldn't find a match for your query! Please try another search/filter term.</p>
 
     <!--Render a card if there is data-->
     <mat-card *ngIf="album"
               appMaterialElevationOnHover="8"
               class="card truncate">
       <div fxLayout="row" fxLayoutAlign="start center" class="rowContainer">
-        <!--Popularity rank shown here if screen size < s-->
+        <!--Popularity rank shown here if screen size < sm-->
         <app-album-rank [albumRank]="album.popularityRank" fxHide fxShow.lt-sm></app-album-rank>
         <!--Album cover image-->
         <img mat-card-image src="{{album.albumCoverUrl}}" alt="{{album.name}} by {{album.artist}}" class="img">
         <div fxLayout="row" class="truncate" fxLayoutAlign="start center">
           <!--Popularity rank shown here if screen size > xs-->
           <app-album-rank [albumRank]="album.popularityRank" fxHide fxShow.gt-xs></app-album-rank>
+          <!--More info about this album and hyperlinks if available-->
           <div fxLayout="column" class="truncate">
             <app-album-text [text]="album.name" [url]="album.albumUrl" class="mat-body-strong"></app-album-text>
             <app-album-text [text]="album.artist" [url]="album.artistUrl" class="mat-body"></app-album-text>

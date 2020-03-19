@@ -3,7 +3,6 @@ import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {Component, DebugElement} from '@angular/core';
 import {By} from '@angular/platform-browser';
 
-// define a component to run tests on
 @Component({
   template: `<mat-card appMaterialElevationOnHover="8">Hover to elevate</mat-card>`
 })

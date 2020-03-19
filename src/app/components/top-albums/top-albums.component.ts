@@ -5,7 +5,8 @@ import {FormControl} from '@angular/forms';
 import {finalize} from 'rxjs/operators';
 
 /**
- * This component creates a card for each album in the top 100 list.
+ * This component creates a card for each album in the top 100 list. It also enables the user to search and filter
+ * the list of albums.
  */
 @Component({
   selector: 'app-top-albums',
@@ -13,8 +14,8 @@ import {finalize} from 'rxjs/operators';
   styleUrls: ['./top-albums.component.scss']
 })
 export class TopAlbumsComponent implements OnInit {
-  topAlbums: Album[];
-  searchText: string;
+  topAlbums: Album[]; // the list of top albums from iTunes
+  searchText: string; // the text the user has entered as a search term
 
   // filter by genre controls
   genres = new FormControl();

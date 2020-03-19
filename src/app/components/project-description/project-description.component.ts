@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalConstants } from '../../global-constants';
 
+/**
+ * This component provides a description of the website and some useful information.
+ */
 @Component({
   selector: 'app-project-description',
   templateUrl: './project-description.component.html',

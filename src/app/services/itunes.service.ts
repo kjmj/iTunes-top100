@@ -17,14 +17,14 @@ export class ItunesService {
   }
 
   /**
-   * Get the top albums on iTunes as an Observable list of Album
+   * Get the top albums on iTunes as an Observable list of Album.
    */
   getTopAlbums(): Observable<Album[]> {
     return this.http.get<any>(this.itunesApi)
       .pipe(
         map(data => {
           return data.feed.entry.map((item, idx) => {
-            // TODO better parsing of null/undefined
+            // create an album by parsing info from iTunes json
             return new Album(
               {
                 popularityRank: idx + 1,
