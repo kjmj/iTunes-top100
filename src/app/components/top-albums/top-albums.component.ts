@@ -16,20 +16,19 @@ export class TopAlbumsComponent implements OnInit {
   topAlbums: Album[];
   searchText: string;
 
+  // filter by genre controls
   genres = new FormControl();
   genreList: string[];
 
-  loading = false;
+  hasLoaded = false; // true if the iTunes data has finished loading
 
   constructor(
     private itunesService: ItunesService
   ) { }
 
   ngOnInit(): void {
-    this.loading = true;
-
     this.itunesService.getTopAlbums().pipe(
-      finalize(() => this.loading = false)
+      finalize(() => this.hasLoaded = true)
     ).subscribe(value => {
       this.topAlbums = value;
       this.genreList = this.getGenres(this.topAlbums);

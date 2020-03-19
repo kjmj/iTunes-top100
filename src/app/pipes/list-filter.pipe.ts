@@ -9,6 +9,8 @@ export class ListFilterPipe implements PipeTransform {
   /**
    * Return a list of albums that has been filtered by a search term and genre(s).
    *
+   * If the filtered list is empty, returned [undefined].
+   *
    * @param list The original list of albums which you want to filter on.
    * @param searchText The search term that the list of albums will be filtered on.
    * @param matchKeys Provide a list of keys. The searchText will be matched on the value associated with the given key(s).
@@ -21,8 +23,14 @@ export class ListFilterPipe implements PipeTransform {
     // a list of items filtered by genre
     const filteredByGenre = this.filterByStrings(list, genres, 'genre');
 
-    // return the intersection of things filtered by search term and genre
-    return filteredBySearch.filter(value => filteredByGenre.includes(value));
+    // get the intersection of things filtered by search term and genre
+    const intersection = filteredBySearch.filter(value => filteredByGenre.includes(value));
+
+    if (intersection.length === 0) {
+      return [undefined];
+    }
+
+    return intersection;
   }
 
   /**
