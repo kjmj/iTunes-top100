@@ -1,12 +1,12 @@
 import {Directive, ElementRef, HostListener, Input} from '@angular/core';
 
+/**
+ * Add an elevation effect to an element on mouseover, and remove the elevation effect on mouseout.
+ * Usage Example: <mat-card appMaterialElevationOnHover="8">Hover to elevate</mat-card>
+ */
 @Directive({
   selector: '[appMaterialElevationOnHover]'
 })
-
-// Add an elevation effect to an element on mouseover, and remove the elevation effect on mouseout
-// Usage Example:
-// <mat-card appMaterialElevationOnHover="8">Hover to elevate</mat-card>
 export class MaterialElevationOnHoverDirective {
 
   constructor(
