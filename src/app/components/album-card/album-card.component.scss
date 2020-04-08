@@ -1,0 +1,33 @@
+@import "../../../styles";
+
+$card-width: 170px;
+$img-size-mobile: 65px;
+
+// desktop
+@media only screen and (min-width: $desktop-min-width) {
+  .card {
+    width: $card-width;
+    margin: 10px;
+  }
+
+  .rowContainer {
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    display: flex;
+  }
+}
+
+// mobile
+@media only screen and (max-width: $mobile-max-width) {
+  .card {
+    margin: 5px;
+    padding: 5px !important;
+  }
+
+  .img {
+    height: $img-size-mobile;
+    width: $img-size-mobile;
+    display: block;
+    margin: 0 !important;
+  }
+}
