@@ -1,7 +1,7 @@
 # ITunesTop100
 Live website: https://kjmj.github.io/iTunes-top100/
 
-This website shows the top 100 albums on iTunes at any given time. I have used [angular](https://angular.io/) to build it.
+This website shows the top 100 albums on iTunes at any given time. I have used [Angular](https://angular.io/) to build it. [Travis CI](https://travis-ci.com) is used for CI/CD. Whenever new code is pushed to the master branch, Travis will try to run a build, and if successful, automatically deploy to production.
 
 ## Setup
 Run `npm install` to install all dependencies.
