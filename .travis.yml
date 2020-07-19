@@ -12,6 +12,9 @@ before_script:
 script:
   - npm run all_tests
 
+before_deploy:
+  - npm run build_prod
+
 deploy:
   provider: pages
   skip_cleanup: true

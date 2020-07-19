@@ -48,6 +48,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "baseHref": "https://kjmj.github.io/iTunes-top100/",
               "budgets": [
                 {
                   "type": "initial",
