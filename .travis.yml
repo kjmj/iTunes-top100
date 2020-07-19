@@ -11,4 +11,3 @@ before_script:
 
 script:
   - yarn all_tests
-  - yarn build --prod --base-href $base_href #base_href should be given in travis as an environment variable
