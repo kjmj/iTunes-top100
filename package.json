@@ -11,7 +11,7 @@
     "deploy": "ng deploy --base-href=/iTunes-top100/ --message=\"Deployment using angular-cli-ghpages\"",
     "test_headless": "ng test --watch false --browsers ChromeHeadless",
     "e2e_headless": "ng e2e --protractor-config='e2e/protractor-ci.conf.js'",
-    "all_tests": "yarn lint && yarn test_headless && yarn e2e_headless"
+    "all_tests": "npm lint && npm test_headless && npm e2e_headless"
   },
   "private": true,
   "dependencies": {
